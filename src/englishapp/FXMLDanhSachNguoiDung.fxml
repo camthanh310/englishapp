@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="700.0" styleClass="wrapper" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="englishapp.FXMLDanhSachNguoiDungController">
+   <children>
+      <BorderPane prefHeight="1000.0" prefWidth="700.0">
+         <center>
+            <VBox prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane prefHeight="350.0" prefWidth="400.0">
+                     <content>
+                        <TableView fx:id="tbNguoiDung" prefHeight="350.0" prefWidth="690.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <top>
+            <VBox alignment="CENTER" prefHeight="440.0" prefWidth="700.0" spacing="25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lbNguoiDung" visible="false" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="title" text="DANH SÁCH NGƯỜI DÙNG" textAlignment="CENTER" />
+                  <JFXTextField fx:id="txtTenDangNhap" labelFloat="true" promptText="Tên đăng nhập" styleClass="input" />
+                  <Label fx:id="loiTenDangNhap" />
+                  <JFXPasswordField fx:id="txtMatKhau" labelFloat="true" promptText="Mật khẩu" styleClass="input" />
+                  <Label fx:id="loiMatKhau" />
+                  <JFXTextField fx:id="txtHo" labelFloat="true" layoutX="10.0" layoutY="101.0" promptText="Họ" styleClass="input" />
+                  <Label fx:id="loiHo" />
+                  <JFXTextField fx:id="txtTen" labelFloat="true" layoutX="10.0" layoutY="140.0" promptText="Tên" styleClass="input" />
+                  <Label fx:id="loiTen" />
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#themNguoiDung" prefHeight="43.0" prefWidth="85.0" styleClass="button-primary" text="Thêm" textAlignment="CENTER" />
+                        <JFXButton alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="327.0" layoutY="14.0" onAction="#lamMoiNguoiDung" styleClass="button-primary" text="Làm mới" />
+                        <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="14.0" onAction="#suaNguoiDung" prefHeight="43.0" prefWidth="83.0" styleClass="button-primary" text="Sửa" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

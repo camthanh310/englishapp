@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="wrapper" stylesheets="@../css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="englishapp.FXMLDanhSachCauHoiController">
+   <children>
+      <Label alignment="CENTER" layoutX="96.0" layoutY="46.0" styleClass="title" text="DANH SÁCH CÂU HỎI" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <VBox layoutX="1.0" layoutY="102.0" prefHeight="350.0" prefWidth="600.0">
+         <children>
+            <ScrollPane prefHeight="350.0" prefWidth="800.0">
+               <content>
+                  <TableView fx:id="tbCauHoi" prefHeight="350.0" prefWidth="600.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#getSuaCauHoi" text="Sửa" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="1.0" layoutY="472.0" prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <JFXButton alignment="TOP_RIGHT" contentDisplay="CENTER" onAction="#themCauHoi" styleClass="button-primary" text="Thêm">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets right="50.0" />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

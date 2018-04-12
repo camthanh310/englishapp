@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" styleClass="wrapper" stylesheets="@../css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="englishapp.FXMLDangNhapController">
+   <children>
+      <Label alignment="CENTER" layoutX="166.0" layoutY="58.0" styleClass="title" text="ĐĂNG NHẬP" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <JFXTextField fx:id="txtTenDangNhap" labelFloat="true" layoutX="97.0" layoutY="105.0" prefHeight="28.0" prefWidth="275.0" promptText="Tên đăng nhập" styleClass="input" AnchorPane.leftAnchor="97.0" />
+      <JFXPasswordField fx:id="txtMatKhau" labelFloat="true" layoutX="97.0" layoutY="187.0" prefHeight="28.0" prefWidth="275.0" promptText="Mật khẩu" styleClass="input" />
+      <FontAwesomeIconView glyphName="USER" layoutX="49.0" layoutY="148.0" size="35" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="44.0" layoutY="230.0" size="35" />
+      <HBox alignment="CENTER" layoutY="268.0" prefHeight="100.0" prefWidth="400.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton contentDisplay="CENTER" onAction="#dangNhap" styleClass="button-primary" text="Đăng nhập" textAlignment="CENTER" />
+            <JFXButton contentDisplay="CENTER" onAction="#thoat" prefHeight="43.0" prefWidth="108.0" styleClass="button-primary" text="Thoát" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

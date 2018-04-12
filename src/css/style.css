@@ -1,0 +1,46 @@
+.wrapper {
+    -fx-text-align: center;
+    -fx-background-color: #fff;
+    -fx-font-family: 'Tahoma';
+}
+
+.title{
+    -fx-margin-bottom: 30;
+    -fx-font-size: 26;
+    -fx-text-fill:#13caca;
+    -fx-font-weight: Bold;
+    -fx-letter-spacing: 2;
+}
+
+.input {
+    -fx-padding: 15;
+    -fx-letter-spacing: 1px;
+    -fx-text-fill: #616161;
+    -fx-background-color: #fff;
+}
+
+.button-primary{
+    -fx-margin: 20;
+    -fx-padding: 10;
+    -fx-font-size: 18;
+    -fx-background-color:#13caca;
+    -fx-text-fill: #fff;
+}
+
+.button-primary:hover {
+    -fx-text-fill: #13caca;
+    -fx-background-color: #FFF;
+    -fx-border-color: #13caca;
+    -fx-cursor: hand;
+}
+
+.close{
+    -fx-margin-bottom: 30;
+    -fx-font-size: 26;
+    -fx-text-fill:#13caca;
+    -fx-font-weight: Bold;
+    -fx-letter-spacing: 2;
+    -fx-cursor: hand;
+}
+
+
